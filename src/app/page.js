@@ -3,22 +3,25 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
+      {/* Header Section */}
       <header
-  className="hero min-h-screen"
-  style={{
-    backgroundImage: "url(/images/herospm.png)",
-  }}>
-  <div className="hero-overlay bg-opacity-60"></div>
-  <div className="hero-content text-neutral-content text-center">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Welcome to SpeakToMe Club!</h1>
-      <p className="mb-5">
-      Apprentissage ludique et interactif de l'anglais pour enfants et ados.
-      </p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</header>
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: "url(/images/herospm.png)", // Image d'arrière-plan locale
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Welcome to SpeakToMe Club!</h1>
+            <p className="mb-5">
+              Apprentissage ludique et interactif de l'anglais pour enfants et ados.
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </header>
+
       {/* Main Section */}
       <main className="bg-white p-6">
         <section className="max-w-4xl mx-auto">
@@ -71,11 +74,6 @@ export default function Home() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Little Speaker Club */}
               <div className="card bg-white shadow-md rounded-lg p-4">
-                <img
-                  src="https://drive.google.com/uc?export=view&id=1vsoGNOHRgHKk9j3r-iycAti0yzxF9f-I"
-                  alt="Little Speaker Club"
-                  className="rounded-lg mb-4"
-                />
                 <h4 className="text-xl font-semibold text-pink-600">Little Speaker Club</h4>
                 <p className="mt-2 text-gray-700">
                   Pour les enfants de 3 à 8 ans, apprendre l'anglais en s'amusant avec des activités interactives.
@@ -84,11 +82,6 @@ export default function Home() {
 
               {/* SpeakToMe Kids */}
               <div className="card bg-white shadow-md rounded-lg p-4">
-                <img
-                  src="https://drive.google.com/uc?export=view&id=1nDr8YtN88Mp_DpF6Z7AP11lbO9teAj4a"
-                  alt="SpeakToMe Kids"
-                  className="rounded-lg mb-4"
-                />
                 <h4 className="text-xl font-semibold text-pink-600">SpeakToMe Kids</h4>
                 <p className="mt-2 text-gray-700">
                   Un programme pour les enfants de 8 à 12 ans, renforçant leur confiance en anglais avec des jeux et activités.
@@ -97,11 +90,6 @@ export default function Home() {
 
               {/* SpeakToMe Teens */}
               <div className="card bg-white shadow-md rounded-lg p-4">
-                <img
-                  src="https://drive.google.com/uc?export=view&id=1FhSK7bT_AyH8JtOmKMIDju8CH3kPFUZI"
-                  alt="SpeakToMe Teens"
-                  className="rounded-lg mb-4"
-                />
                 <h4 className="text-xl font-semibold text-pink-600">SpeakToMe Teens</h4>
                 <p className="mt-2 text-gray-700">
                   Pour les adolescents, des cours interactifs pour améliorer l'expression orale et la compréhension en anglais.
