@@ -2,99 +2,130 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <header
+  className="hero min-h-screen"
+  style={{
+    backgroundImage: "url(/images/herospm.png)",
+  }}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-neutral-content text-center">
+    <div className="max-w-md">
+      <h1 className="mb-5 text-5xl font-bold">Welcome to SpeakToMe Club!</h1>
+      <p className="mb-5">
+      Apprentissage ludique et interactif de l'anglais pour enfants et ados.
+      </p>
+      <button className="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</header>
+      {/* Main Section */}
+      <main className="bg-white p-6">
+        <section className="max-w-4xl mx-auto">
+          {/* Message Section */}
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-semibold text-pink-600">Chez SpeakToMe</h2>
+            <p className="mt-4 text-lg text-gray-700">
+              Nous sommes ravis d'accompagner vos enfants dans l'apprentissage de l'anglais de manière ludique et interactive.
+              Ici, chacun apprend à son rythme, en petits groupes, tout en s'amusant.
+            </p>
+            <p className="mt-2 text-lg text-gray-700">
+              Notre mission est de cultiver la confiance et l’enthousiasme pour l'anglais dès le plus jeune âge.
+              Ensemble, découvrons le plaisir d'apprendre une nouvelle langue !
+            </p>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+          {/* Video Section */}
+          <div className="mb-8 text-center">
+            <h3 className="text-2xl font-semibold text-pink-600">Découvrez SpeakToMe en vidéo</h3>
+            <iframe
+              className="w-full h-64 mt-4 rounded-lg"
+              src="https://www.youtube.com/embed/oIJt652g9IA"
+              title="SpeakToMe Video"
+              frameBorder="0"
+              allowFullScreen
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          </div>
+
+          {/* Horaires Section */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-pink-600 text-center">Horaires Flexibles</h3>
+            <p className="mt-4 text-lg text-gray-700 text-center">
+              Découvrez nos horaires flexibles adaptés à chaque tranche d'âge pour des cours en petits groupes.
+            </p>
+            <div className="mt-4 text-center">
+              <a
+                href="https://drive.google.com/file/d/1H7V4bsfDzPZsgCYlVhkvNoO2Aw2R_nLg/view?usp=drive_link"
+                className="btn btn-outline btn-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir les horaires
+              </a>
+            </div>
+          </div>
+
+          {/* Cours / Groupes Section */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-pink-600 text-center">Nos Programmes</h3>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Little Speaker Club */}
+              <div className="card bg-white shadow-md rounded-lg p-4">
+                <img
+                  src="https://drive.google.com/uc?export=view&id=1vsoGNOHRgHKk9j3r-iycAti0yzxF9f-I"
+                  alt="Little Speaker Club"
+                  className="rounded-lg mb-4"
+                />
+                <h4 className="text-xl font-semibold text-pink-600">Little Speaker Club</h4>
+                <p className="mt-2 text-gray-700">
+                  Pour les enfants de 3 à 8 ans, apprendre l'anglais en s'amusant avec des activités interactives.
+                </p>
+              </div>
+
+              {/* SpeakToMe Kids */}
+              <div className="card bg-white shadow-md rounded-lg p-4">
+                <img
+                  src="https://drive.google.com/uc?export=view&id=1nDr8YtN88Mp_DpF6Z7AP11lbO9teAj4a"
+                  alt="SpeakToMe Kids"
+                  className="rounded-lg mb-4"
+                />
+                <h4 className="text-xl font-semibold text-pink-600">SpeakToMe Kids</h4>
+                <p className="mt-2 text-gray-700">
+                  Un programme pour les enfants de 8 à 12 ans, renforçant leur confiance en anglais avec des jeux et activités.
+                </p>
+              </div>
+
+              {/* SpeakToMe Teens */}
+              <div className="card bg-white shadow-md rounded-lg p-4">
+                <img
+                  src="https://drive.google.com/uc?export=view&id=1FhSK7bT_AyH8JtOmKMIDju8CH3kPFUZI"
+                  alt="SpeakToMe Teens"
+                  className="rounded-lg mb-4"
+                />
+                <h4 className="text-xl font-semibold text-pink-600">SpeakToMe Teens</h4>
+                <p className="mt-2 text-gray-700">
+                  Pour les adolescents, des cours interactifs pour améliorer l'expression orale et la compréhension en anglais.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Section */}
+          <div className="bg-pink-100 p-6 rounded-lg text-center">
+            <h3 className="text-2xl font-semibold text-pink-600">Contactez-nous</h3>
+            <p className="mt-4 text-lg text-gray-700">
+              📞 Téléphone : 0696 24 78 04 / 0690 70 14 38 <br />
+              ✉️ Email : <a href="mailto:speaktome971@gmail.com" className="text-pink-600 underline">speaktome971@gmail.com</a> <br />
+              📍 Adresse : Route de Boisvin, Beausoleil, Les Abymes
+            </p>
+            <p className="mt-2 text-lg text-gray-700">Nous vous répondrons dans les plus brefs délais !</p>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-pink-500 p-6 text-white text-center">
+        <p>&copy; 2024 SpeakToMe Club - Tous droits réservés</p>
       </footer>
     </div>
   );
