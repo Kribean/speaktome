@@ -7,7 +7,7 @@ export default function Home() {
       <header
         className="hero min-h-screen"
         style={{
-          backgroundImage: "url(/images/herospm.png)", // Image d'arrière-plan locale
+          backgroundImage: "url(/images/speaktome_hero.jpeg)", // Image d'arrière-plan locale
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
@@ -17,7 +17,6 @@ export default function Home() {
             <p className="mb-5">
               Apprentissage ludique et interactif de l'anglais pour enfants et ados.
             </p>
-            <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
       </header>
@@ -57,14 +56,7 @@ export default function Home() {
               Découvrez nos horaires flexibles adaptés à chaque tranche d'âge pour des cours en petits groupes.
             </p>
             <div className="mt-4 text-center">
-              <a
-                href="https://drive.google.com/file/d/1H7V4bsfDzPZsgCYlVhkvNoO2Aw2R_nLg/view?usp=drive_link"
-                className="btn btn-outline btn-pink-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Voir les horaires
-              </a>
+              <Image src="/images/horairespm.png" className="w-full" width="500" height="500" alt="horaire speak to me" />
             </div>
           </div>
 
